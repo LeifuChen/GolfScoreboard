@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    >
+
+    <TextView
+        android:id="@+id/holeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Hole 1:"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/strokeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="5"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/removeStrokeButton"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/addStrokeButton"
+        android:text="-"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/addStrokeButton"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="+"
+        android:textSize="18sp"
+        />
+</RelativeLayout>
