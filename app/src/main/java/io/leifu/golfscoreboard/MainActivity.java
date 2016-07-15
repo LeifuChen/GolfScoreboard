@@ -4,10 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences.Editor mEditor;
     private ScoreAdapter mAdapter;
     @BindView(android.R.id.list)
-    ListView mList;
+    RecyclerView mList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         }
         mAdapter= new ScoreAdapter(this, mGolfScores);
         mList.setAdapter(mAdapter);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mList.setLayoutManager(layoutManager);
+        mList.setHasFixedSize(true);
     }
 
     @Override
